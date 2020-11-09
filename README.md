@@ -12,12 +12,12 @@ alternatively you can use this
 from <function_name> import <function>
 ```
 Using this method will change the way which you call the function within your code. Each is displayed below.
-####**First Iteration**
+#### **First Iteration**
 ```
 import random
 print(random.random())  # generates float number between 0 and 1
 ```
-####**Second Iteration**
+#### **Second Iteration**
 ```
 # from random import random
 # print(random())
