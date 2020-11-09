@@ -24,27 +24,28 @@ import random
 # check if number is lower than .50 then round to lower end
 # if number is greater than .50 then round to upper end
 
-# import math
+import math
+
 
 # print(math.pi)  # prints pi
 
 
 # Function which determines what is after the . in a float number
-# def round_number(num):
-#     decimal = str(num).split('.')[1]
-#     # if the value after decimal is 5 or more it rounds up
-#     if decimal >= "5":
-#         math.ceil(num)
-#         return print(math.ceil(num))
-#     # else it rounds up
-#     else:
-#         math.floor(num)
-#         return print(math.floor(num))
+def round_number():
+    while True:
+        number = float(input("What number would you like to round?    "))
+        decimal = str(number).split('.')[1][0]
+        # if the value after decimal is 5 or more it rounds up
+        if decimal >= "5":
+            math.ceil(number)
+            print(math.ceil(number))
+        # else it rounds up
+        else:
+            math.floor(number)
+            print(math.floor(number))
 
 
-# while True:
-#     number = float(input("What number would you like to round?    "))
-#     round_number(number)
+round_number()
 
 import os
 # To find out system configuration or system related information
