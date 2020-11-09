@@ -90,3 +90,14 @@ def check_response_code():
 - success code 200 : site is live
 - error code 404 : site is down
 
+## Json basics
+- JSON (Java Script Object Notation)
+- use cases - browser data
+- data is in key value pairs
+- Json encoding from a dictionary
+- Json decoding into a dictionary
+- handling/creating files with python
+- writing to file
+- reading from file
+-
+
