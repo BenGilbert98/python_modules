@@ -8,6 +8,11 @@ import random
 # We have random method in Python library which we use by importing
 # print(random.random())  # generates float number between 0 and 1
 
+# Second Iteration
+# from random import random
+# print(random())
+
+
 # import math
 
 # number_float = 23.44
@@ -19,23 +24,54 @@ import random
 # check if number is lower than .50 then round to lower end
 # if number is greater than .50 then round to upper end
 
-import math
+# import math
 
-print(math.pi) #prints pi
+# print(math.pi)  # prints pi
+
 
 # Function which determines what is after the . in a float number
-def round_number(num):
-    decimal = str(num).split('.')[1]
-    # if the value after decimal is 5 or more it rounds up
-    if decimal >= "5":
-        math.ceil(num)
-        return print(math.ceil(num))
-    # else it rounds up
-    else:
-        math.floor(num)
-        return print(math.floor(num))
+# def round_number(num):
+#     decimal = str(num).split('.')[1]
+#     # if the value after decimal is 5 or more it rounds up
+#     if decimal >= "5":
+#         math.ceil(num)
+#         return print(math.ceil(num))
+#     # else it rounds up
+#     else:
+#         math.floor(num)
+#         return print(math.floor(num))
 
 
-while True:
-    number = float(input("What number would you like to round?    "))
-    round_number(number)
+# while True:
+#     number = float(input("What number would you like to round?    "))
+#     round_number(number)
+
+import os
+# To find out system configuration or system related information
+# based on the information provided we can handle the user request
+
+import math, datetime, sys  # multiple modules can be imported at once
+
+# working_dir = os.getcwd()
+# print(working_dir)
+
+# Lets find out the name of our os (Linux only)
+# print(os.uname())
+
+# Lets count the number of CPUs
+# print(os.cpu_count()) # gives us CPU count inside os
+
+# Lets find out the current date
+# print(datetime.datetime.today())
+# datetime module allow us to find current date / time etc
+
+# To find out system path
+# print(sys.path)
+
+# How can we create a customised method and utilise the built in functionality at the same time
+# When and why should we do that
+# def current_system_path():
+#     print(f"this is your current directory \n {sys.path}")
+# current_system_path()
+
+# pip is used to install packages within python
