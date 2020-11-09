@@ -24,7 +24,12 @@ print(random.random())  # generates float number between 0 and 1
 ```
 ## What is pip and how we use it?
 - Package manager for Python
+- Installed through terminal
 - Helps us install external packages e.g requests
+- Syntax : pip install <name of package> e.g
+```
+pip install requests
+```
 
 ## APIs within Python
 
@@ -56,6 +61,28 @@ if live_response.status_code == 200:
 else:
     print("oops something went wrong... ")
 ```
+#### Second Iteration
+- In this iteration the code is put into a function in order to more easily call it without having DRY code.
+```
+def check_response_code():
+    if live_response.status_code == 200:
+        print('Mission Successful!', emoji.emojize(":thumbs_up:"), str(live_response.status_code))
+    elif live_response.status_code == 404:
+        print(" the site in unavailable util further notice. Please come back later")
+    else:
+        print("oops something went wrong... ")
+```
+#### Third Iteration
+```
+def check_response_code():
+    if live_response.status_code:  # Will evaluate as true if the code is between 200-400, otherwise false
+        print('Mission Successful!', emoji.emojize(":thumbs_up:"), str(live_response.status_code))
+    elif live_response.status_code == 404:
+        print(" the site in unavailable util further notice. Please come back later")
+    else:
+        print("oops something went wrong... ")
+```
+- as mentioned in the pseudo code, ```live_response.status_code:``` will return true if the code is between 200 and 400.
 ## Requests
 - Requests help us manage API (Application Programming Interfaces)
 - http and https are protocols that are used to send, receive, interact with data that is live on the web
