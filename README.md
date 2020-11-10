@@ -102,6 +102,7 @@ def check_response_code():
 
 ### Handling files and permissions
 ![](images/handling_files.png)
+- Syntax - ```open("<file_name>", <mode>)```
 ## Exception handling
 - ```try```and ```except```
 - ```raise``` and ```finally```
