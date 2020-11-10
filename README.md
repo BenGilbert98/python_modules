@@ -99,5 +99,45 @@ def check_response_code():
 - handling/creating files with python
 - writing to file
 - reading from file
--
 
+## Exception handling
+- ```try```and ```except```
+- ```raise``` and ```finally```
+- `try:` Attempts to run the block to check for errors
+- `except:` If the try block fails the except block runs
+- `else:` Executed after the try if nothing fails
+- `finally:` Executed regardless of outcome of try
+- `raise Exception("<message>")` Raises an error with an optional message.
+
+### Common errors
+- ValueError (Raised when an operation or function receives an argument that has the right type but an inappropriate value, and the situation is not described by a more precise exception such as IndexError.)
+- NameError (Raised when a local or global name is not found. This applies only to unqualified names. The associated value is an error message that includes the name that could not be found.)
+- IndentationError (Base class for syntax errors related to incorrect indentation. This is a subclass of SyntaxError.)
+- SyntaxError (Raised when the parser encounters a syntax error.)
+- TypeError (Raised when an operation or function is applied to an object of inappropriate type. The associated value is a string giving details about the type mismatch.)
+
+### Use cases
+- These blocks are used when we expect an error or exception to occur within the python interpreter
+- This helps us handle the errors of exception and add a customised message
+- Make a decision based on customer needs
+
+#### Iteration 1
+```
+try: # lets use try block for one line of code where we know an error will be raised
+    file = open("orders.text")
+except:
+    print("Error")
+```
+#### Iteration 2 using ```raise``` and ```finally```
+```
+try:
+    file = open("orders.text")
+except FileNotFoundError as err: #creating alias for FileNotFound error in except block
+    print(f"Please create an 'orders.text' file" + str(err))
+
+# if we want to see the actual exception together with customised message
+    raise
+
+finally: # finally executes regardless of the above conditions
+    print("Finally message")
+```
