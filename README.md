@@ -100,6 +100,8 @@ def check_response_code():
 - writing to file
 - reading from file
 
+### Handling files and permissions
+![](images/handling_files.png)
 ## Exception handling
 - ```try```and ```except```
 - ```raise``` and ```finally```
